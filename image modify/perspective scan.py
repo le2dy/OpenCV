@@ -18,7 +18,7 @@ def onMouse(event, x, y, flags, param):
     global src
 
     if event == cv2.EVENT_LBUTTONDOWN:
-        cv2.circle(draw, (x, y), 10, (0, 255, 0), -1)
+        cv2.circle(draw, (x, y), 5, (0, 255, 0), -1)
         cv2.imshow(name, draw)
 
         if pts_cnt < 4:
@@ -28,6 +28,9 @@ def onMouse(event, x, y, flags, param):
         if pts_cnt == 4:
             sm = pts.sum(axis=1)
             diff = np.diff(pts, axis=1)
+
+            print(diff)
+            print(sm)
 
             top_left = pts[np.argmin(sm)]
             bottom_right = pts[np.argmax(sm)]

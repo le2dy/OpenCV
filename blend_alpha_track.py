@@ -12,7 +12,6 @@ def onChange(value):
     src1 = cv2.resize(src1, (1920, 1260))
 
     alpha = value / 100
-    print(value)
     dst = cv2.addWeighted(src2, alpha, src1, 1 - alpha, 0)
     dst = cv2.resize(dst, (1080, 640))
     cv2.imshow(win_name, dst)

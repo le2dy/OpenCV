@@ -1,10 +1,10 @@
 import cv2
 
-src = cv2.imread('Images/hats.png', cv2.IMREAD_GRAYSCALE)
-template = cv2.imread('Images/hat.png', cv2.IMREAD_GRAYSCALE)
-dst = cv2.imread('Images/hats.png')
+src = cv2.imread('Images/Screenshot.png', cv2.IMREAD_GRAYSCALE)
+template = cv2.imread('Images/letter_a.jpg', cv2.IMREAD_GRAYSCALE)
+dst = cv2.imread('Images/Screenshot.png')
 
-template = cv2.resize(template, (800, 200))
+# template = cv2.resize(template, (40, 40))
 
 result = cv2.matchTemplate(src, template, cv2.TM_SQDIFF_NORMED)
 

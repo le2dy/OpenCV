@@ -2,7 +2,8 @@ import cv2
 import numpy as np
 import matplotlib.pylab as plt
 
-src = cv2.imread('Images/apple.png')
+# src = cv2.imread('Images/downtown.png')
+src = cv2.imread('testroom/capture.jpg')
 src_yuv = cv2.cvtColor(src, cv2.COLOR_BGR2YUV)
 
 src_eq = src_yuv.copy()
