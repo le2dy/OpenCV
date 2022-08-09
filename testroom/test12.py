@@ -12,6 +12,6 @@ mask = cv2.inRange(hsv, (50, 50, 0), (80, 255, 255))
 
 cv2.copyTo(src, mask, chroma)
 
-cv2.imshow('asd', chroma)
+cv2.imshow('chroma', chroma)
 cv2.waitKey()
 cv2.destroyAllWindows()
